@@ -21,7 +21,7 @@ function renderCoursesInTable(series) {
         trElement.innerHTML = `<td>${s.id}</td>
                            <td><a href=#>${s.name}</a></td>
                            <td>${s.channel}</td>
-                           <td>${s.seassons}</td>`;
+                           <td>${s.seasons}</td>`;
         seriesTbody.appendChild(trElement);
     });
 }
@@ -37,7 +37,7 @@ function getAverageSeassons(series) {
     let totalSeassons = 0;
     let numSeries = 0;
     series.forEach((serie) => {
-        totalSeassons = totalSeassons + serie.seassons;
+        totalSeassons = totalSeassons + serie.seasons;
         numSeries++;
     });
     const promedio = totalSeassons / numSeries;
